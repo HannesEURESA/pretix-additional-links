@@ -1,0 +1,155 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-10-12 16:30+0100\n"
+"PO-Revision-Date: 2020-10-12 16:30+0100\n"
+"Last-Translator: Hannes <hannes@euresa.de>\n"
+"Language-Team: German <https://translate.pretix.eu/projects/pretix/"
+"pretix-plugin-additional-links/de/>\n"
+"Language: de\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 3.10.3\n"
+
+#: pretix_additional_links/__init__.py:10 pretix_additional_links/signals.py:23
+#: pretix_additional_links/templates/pretix_additional_links/index.html:6
+#: pretix_additional_links/templates/pretix_additional_links/index.html:8
+msgid "Links"
+msgstr "Links"
+
+#: pretix_additional_links/__init__.py:12
+msgid ""
+"Allows you to add static links to your event site, for example for a FAQ, "
+"terms of service, etc."
+msgstr ""
+"Erlaubt Ihnen, statische Links zu Ihrer Veranstaltungsseite hinzuzufügen, "
+"wie z.B. FAQ, Teilnehmerbedingungen, etc."
+
+#: pretix_additional_links/models.py:11 pretix_additional_links/views.py:101
+msgid "Link Form"
+msgstr "Link Form"
+
+#: pretix_additional_links/models.py:15
+msgid "The slug may only contain letters, numbers, dots and dashes."
+msgstr ""
+"Die Kurzform darf nur Buchstaben, Zahlen, Punkte und Bindestriche enthalten."
+
+#: pretix_additional_links/models.py:18
+msgid ""
+"This will be used to generate the Slug of the Link. Please only use latin "
+"letters, numbers, dots and dashes. You cannot change this afterwards."
+msgstr ""
+"Dies wird benutzt, um die zugehörigkeit der Links zu generieren. Bitte verwenden Sie "
+"nur lateinische Buchstaben, Zahlen, Punkte und Bindestriche. Sie können "
+"diesen Wert nicht mehr ändern."
+
+#: pretix_additional_links/models.py:22 pretix_additional_links/templates/pretix_additional_links/index.html:29
+msgid "Link title"
+msgstr "Link Titel"
+
+#: pretix_additional_links/models.py:23 pretix_additional_links/templates/pretix_additional_links/index.html:29
+msgid "Link url"
+msgstr "Link URL"
+
+#: pretix_additional_links/models.py:24
+msgid "Show link on the event start page"
+msgstr "Link auf der Startseite anzeigen"
+
+#: pretix_additional_links/models.py:25
+msgid "Show link on the event page within the Footer"
+msgstr "Link in der Fußzeile anzeigen"
+
+#: pretix_additional_links/models.py:26
+msgid "Show link on the event page within the Header"
+msgstr "Link im Header anzeigen"
+
+#: pretix_additional_links/signals.py:46
+msgid "The link has been created."
+msgstr "Der Link wurde erstellt."
+
+#: pretix_additional_links/signals.py:47
+msgid "The link has been modified."
+msgstr "Der Link wurde verändert."
+
+#: pretix_additional_links/signals.py:48
+msgid "The link has been deleted."
+msgstr "Der Link wurde gelöscht"
+
+#: pretix_additional_links/templates/pretix_additional_links/delete.html:4
+#: pretix_additional_links/templates/pretix_additional_links/delete.html:6
+msgid "Delete a link?"
+msgstr "Link löschen"
+
+#: pretix_additional_links/templates/pretix_additional_links/delete.html:9
+#, python-format
+msgid "Are you sure you want to delete the link <strong>%(name)s</strong>?"
+msgstr ""
+"Sind Sie sicher, dass Sie den Link <strong>%(name)s</strong> löschen "
+"möchten?"
+
+#: pretix_additional_links/templates/pretix_additional_links/delete.html:14
+msgid "Cancel"
+msgstr "Abbrechen"
+
+#: pretix_additional_links/templates/pretix_additional_links/delete.html:17
+msgid "Delete"
+msgstr "Löschen"
+
+#: pretix_additional_links/templates/pretix_additional_links/form.html:5
+#: pretix_additional_links/templates/pretix_additional_links/form.html:7
+msgid "Additional Links"
+msgstr "Zusätzliche Links"
+
+#: pretix_additional_links/templates/pretix_additional_links/form.html:14
+msgid "General information"
+msgstr "Allgemeine Informationen"
+
+#: pretix_additional_links/templates/pretix_additional_links/form.html:24
+msgid "Save"
+msgstr "Speichern"
+
+#: pretix_additional_links/templates/pretix_additional_links/form.html:33
+msgid "Link history"
+msgstr "Link Verlauf"
+
+#: pretix_additional_links/templates/pretix_additional_links/front_page.html:4
+msgid "More information"
+msgstr "Weitere Informationen"
+
+#: pretix_additional_links/templates/pretix_additional_links/index.html:12
+msgid "You haven't created any links yet."
+msgstr "Sie haben noch keine Links erstellt."
+
+#: pretix_additional_links/templates/pretix_additional_links/index.html:18
+#: pretix_additional_links/templates/pretix_additional_links/index.html:22
+msgid "Create a new link"
+msgstr "Einen neuen Link erstellen"
+
+#: pretix_additional_links/views.py:71
+msgid "The requested link does not exist."
+msgstr "Der gesuchte Link existiert nicht."
+
+#: pretix_additional_links/views.py:51
+msgid "You already have a link on that Slug."
+msgstr "Du hast bereits einen Link mit diesem Slug."
+
+#: pretix_additional_links/views.py:92
+msgid "The selected link has been deleted."
+msgstr "Die Seite wurde gelöscht."
+
+#: pretix_additional_links/views.py:121
+msgid "Your changes have been saved."
+msgstr "Ihre Änderungen wurden gespeichert."
+
+#: pretix_additional_links/views.py:161 pretix_additional_links/views.py:132
+msgid "We could not save your changes. See below for details."
+msgstr ""
+"Die Änderungen konnten nicht gespeichert werden. Die fehlerhaften Felder "
+"sind farblich markiert."
+
+#: pretix_additional_links/views.py:153
+msgid "The new link has been created."
+msgstr "Der neue Link wurde erstellt."

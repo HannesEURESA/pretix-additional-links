@@ -1,0 +1,15 @@
+{% load i18n %}
+{% load eventurl %}
+<section class="front-page">
+    <h3>{% trans "More information" %}</h3>
+    <ul>
+        {% for p in urls %}
+            <li>
+                <a href="{{ p.link_url }}" target="_blank">
+                    {{ p.title }}
+                </a>
+            </li>
+        {% endfor %}
+    </ul>
+</section>
+

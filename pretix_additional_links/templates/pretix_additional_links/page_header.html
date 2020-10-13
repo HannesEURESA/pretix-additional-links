@@ -1,0 +1,21 @@
+{% load i18n %}
+{% load eventurl %}
+
+<section class="container page-header-links">
+    <nav class="navbar navbar-inverse">
+        <div class="container-fluid">
+            <ul class="nav navbar-nav">
+                <div class="container-fluid">
+                    <div class="row">
+                {% for p in urls %}
+                    <li>
+                        <a href="{{ p.link_url }}" target="_blank">
+                            <span class="fa fa-chevron-right fa-fw">{{ p.title }}</span>
+                        </a><span>&nbsp;</span>
+                    </li>
+                {% endfor %}
+                    </div></div>
+            </ul>
+        </div>
+    </nav>
+</section>

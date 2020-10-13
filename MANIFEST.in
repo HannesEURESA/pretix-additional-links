@@ -1,0 +1,3 @@
+recursive-include pretix_additional_links/static *
+recursive-include pretix_additional_links/templates *
+recursive-include pretix_additional_links/locale *

@@ -1,0 +1,59 @@
+{% extends "pretixcontrol/event/base.html" %}
+{% load i18n %}
+{% load compress %}
+{% load static %}
+{% load eventurl %}
+{% block title %}{% trans "Links" %}{% endblock %}
+{% block content %}
+    <h1>{% trans "Links" %}</h1>
+    {% if urls|length == 0 %}
+        <div class="empty-collection">
+            <p>
+                {% blocktrans trimmed %}
+                    You haven't created any links yet.
+                {% endblocktrans %}
+            </p>
+
+            <a href="{% url "plugins:pretix_additional_links:create" organizer=request.event.organizer.slug event=request.event.slug %}"
+                    class="btn btn-primary btn-lg"><i class="fa fa-plus"></i> {% trans "Create a new link" %}</a>
+        </div>
+    {% else %}
+        <p>
+            <a href="{% url "plugins:pretix_additional_links:create" organizer=request.event.organizer.slug event=request.event.slug %}" class="btn btn-default"><i class="fa fa-plus"></i> {% trans "Create a new link" %}
+            </a>
+        </p>
+        <div class="table-responsive">
+            <table class="table table-hover">
+                <thead>
+                <tr>
+                    <th>{% trans "Link title" %}</th>
+                    <th disabled>{% trans "Slug" %}</th>
+                    <th>{% trans "URL Link" %}</th>
+                    <th></th>
+                </tr>
+                </thead>
+                <tbody>
+                {% for p in urls %}
+                    <tr>
+                        <td>
+                            <strong><a href="{% url "plugins:pretix_additional_links:edit" organizer=request.event.organizer.slug event=request.event.slug page=p.id %}">{{ p.title }}</a></strong>
+                        </td>
+                        <td>
+                            <strong>{{ p.slug }}</strong>
+                        </td>
+                        <td>
+                            <strong>{{p.link_url}}</strong>
+                        </td>
+                        <td class="text-right">
+                            <a href="{% url "plugins:pretix_additional_links:edit" organizer=request.event.organizer.slug event=request.event.slug page=p.id %}" class="btn btn-default btn-sm"><i class="fa fa-edit"></i></a>
+                            <a href="{% url "plugins:pretix_additional_links:delete" organizer=request.event.organizer.slug event=request.event.slug page=p.id %}" class="btn btn-danger btn-sm"><i class="fa fa-trash"></i></a>
+                        </td>
+                    </tr>
+                {% endfor %}
+                </tbody>
+            </table>
+        </div>
+        {% include "pretixcontrol/pagination.html" %}
+    {% endif %}
+{% endblock %}
+
